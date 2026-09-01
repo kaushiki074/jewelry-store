@@ -1,0 +1,516 @@
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+  width: 100%;
+  background: #fffdf9;
+  color: #292d30;
+  border-bottom: 1px solid #ece8e1;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   TOP ROW
+================================ */
+
+.navbar-top {
+  width: 100%;
+  height: 145px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 25px;
+
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   MENU BUTTON
+================================ */
+
+.menu-button {
+  width: 50px !important;
+  height: 50px !important;
+
+  min-width: 50px;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+
+  color: #292d30;
+
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  background: transparent !important;
+  color: #292d30 !important;
+}
+
+.menu-button svg {
+  width: 38px;
+  height: 38px;
+
+  stroke-width: 1.5;
+}
+
+
+/* ================================
+   LOGO
+================================ */
+
+.logo {
+  margin-left: 80px;
+}
+
+.logo a {
+  display: block;
+
+  text-decoration: none;
+}
+
+.logo-main {
+  display: block;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 32px;
+  font-weight: 300;
+
+  letter-spacing: 9px;
+
+  color: #292d30;
+}
+
+.logo-sub {
+  display: block;
+
+  margin-top: 8px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 7px;
+
+  color: #292d30;
+}
+
+
+/* ================================
+   RIGHT ICONS
+================================ */
+
+.nav-actions {
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  white-space: nowrap;
+}
+
+
+/* ================================
+   ICON BUTTONS / LINKS
+================================ */
+
+.nav-icon-link,
+.wishlist-link,
+.cart-link {
+  width: 42px !important;
+  height: 42px !important;
+
+  min-width: 42px;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+
+  color: #292d30 !important;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.nav-icon-link:hover,
+.wishlist-link:hover,
+.cart-link:hover {
+  background: transparent !important;
+
+  color: #292d30 !important;
+
+  transform: translateY(-1px);
+
+  opacity: 0.7;
+}
+
+.nav-icon-link svg,
+.wishlist-link svg,
+.cart-link svg {
+  width: 29px;
+  height: 29px;
+
+  stroke-width: 1.7;
+}
+
+
+/* ================================
+   COUNT BADGES
+================================ */
+
+.icon-count {
+  position: absolute;
+
+  top: -3px;
+  right: -5px;
+
+  min-width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 5px;
+
+  background: #111317 !important;
+  color: #ffffff !important;
+
+  border-radius: 50%;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  line-height: 1;
+}
+
+
+/* ================================
+   ACCOUNT LINKS
+================================ */
+
+.account-links {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.account-links a {
+  padding: 0 !important;
+  margin: 0 !important;
+
+  border: none !important;
+  background: transparent !important;
+
+  text-decoration: none;
+
+  color: #292d30;
+
+  font-size: 14px;
+}
+
+
+/* ================================
+   LOGOUT
+================================ */
+
+.logout-button {
+  margin: 0 !important;
+
+  padding: 10px 20px !important;
+
+  background: transparent !important;
+
+  border: 1px solid #d9d4cb !important;
+
+  border-radius: 2px !important;
+
+  color: #292d30 !important;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background: #292d30 !important;
+
+  color: white !important;
+}
+
+
+/* ================================
+   PINCODE ROW
+================================ */
+
+.pincode-section {
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 18px;
+
+  color: #747a80;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 18px;
+
+  box-sizing: border-box;
+}
+
+.location-icon {
+  width: 26px;
+  height: 26px;
+
+  color: #b79272;
+
+  stroke-width: 1.8;
+}
+
+.dropdown-arrow {
+  font-size: 13px;
+
+  color: #747a80;
+}
+
+
+/* ================================
+   SEARCH BAR
+================================ */
+
+.navbar-search {
+  width: calc(100% - 20px);
+
+  height: 74px;
+
+  margin: 0 auto 25px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  background: #f0ede7;
+}
+
+.navbar-search input {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  margin: 0 !important;
+
+  padding: 0 75px 0 25px;
+
+  background: transparent !important;
+
+  border: none !important;
+
+  outline: none;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 19px;
+
+  color: #565b60;
+
+  box-sizing: border-box;
+}
+
+.navbar-search input:focus {
+  border: none !important;
+}
+
+.navbar-search input::placeholder {
+  color: #747a80;
+}
+
+.search-icon {
+  position: absolute;
+
+  right: 25px;
+
+  width: 31px;
+  height: 31px;
+
+  color: #292d30;
+
+  pointer-events: none;
+
+  stroke-width: 1.8;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+  .navbar-top {
+    height: 125px;
+  }
+
+  .logo {
+    margin-left: 45px;
+  }
+
+  .logo-main {
+    font-size: 27px;
+
+    letter-spacing: 7px;
+  }
+
+  .nav-actions {
+    gap: 12px;
+  }
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 700px) {
+
+  .navbar-top {
+    height: 90px;
+
+    padding: 0 12px;
+  }
+
+  .menu-button {
+    width: 38px !important;
+    height: 38px !important;
+
+    min-width: 38px;
+  }
+
+  .menu-button svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .logo {
+    margin-left: 20px;
+  }
+
+  .logo-main {
+    font-size: 19px;
+
+    letter-spacing: 4px;
+  }
+
+  .logo-sub {
+    margin-top: 5px;
+
+    font-size: 7px;
+
+    letter-spacing: 4px;
+  }
+
+  .nav-actions {
+    gap: 3px;
+  }
+
+  .nav-icon-link,
+  .wishlist-link,
+  .cart-link {
+    width: 35px !important;
+    height: 35px !important;
+
+    min-width: 35px;
+  }
+
+  .nav-icon-link svg,
+  .wishlist-link svg,
+  .cart-link svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .icon-count {
+    min-width: 19px;
+    height: 19px;
+
+    font-size: 9px;
+
+    top: -3px;
+    right: -3px;
+  }
+
+  .account-links,
+  .logout-button {
+    display: none !important;
+  }
+
+  .pincode-section {
+    height: 65px;
+
+    padding: 0 15px;
+
+    font-size: 15px;
+  }
+
+  .navbar-search {
+    width: calc(100% - 16px);
+
+    height: 60px;
+
+    margin-bottom: 16px;
+  }
+
+  .navbar-search input {
+    font-size: 16px;
+
+    padding-left: 18px;
+  }
+
+  .search-icon {
+    right: 18px;
+
+    width: 27px;
+    height: 27px;
+  }
+}
