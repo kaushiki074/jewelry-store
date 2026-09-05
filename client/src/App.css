@@ -336,21 +336,12 @@ button:not(.product-card button):not(.cart-item button):hover {
 
 }
 
-/* ================================
-   PRODUCT ACTIONS
-================================ */
-
 .product-actions {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-top: 18px;
 }
-
-
-/* ================================
-   HEART BUTTON
-================================ */
 
 .product-heart {
   width: 48px;
@@ -366,7 +357,7 @@ button:not(.product-card button):not(.cart-item button):hover {
   flex-shrink: 0;
 
   background: #ffffff !important;
-  border: none !important; /* removed border */
+  border: none !important;
   border-radius: 2px;
 
   cursor: pointer;
@@ -382,18 +373,10 @@ button:not(.product-card button):not(.cart-item button):hover {
   fill: none;
 }
 
-
-/* CLICKED HEART */
-
 .product-heart.active svg {
   stroke: #c62828;
   fill: #c62828;
 }
-
-
-/* ================================
-   ADD TO CART
-================================ */
 
 .product-card .add-to-cart-button {
   flex: 1;

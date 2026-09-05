@@ -10,7 +10,6 @@ function Footer() {
         <div className="footer-brand">
           <h2>JEWELRY</h2>
           <span>STORE</span>
-
           <p>
             Timeless pieces, crafted to make
             every moment sparkle.

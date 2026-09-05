@@ -6,6 +6,8 @@ import Login from "./Login";
 import Signup from "./Signup";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Admin from "./Admin";
+import ForgotPassword from "./ForgotPassword";
 import "./App.css";
 
 function App() {
@@ -26,7 +28,7 @@ function App() {
     setCart([]);
     navigate("/login");
   };
-  
+
   useEffect(() => {
     fetch("http://localhost:3000/products")
       .then((response) => response.json())
@@ -63,10 +65,6 @@ function App() {
         });
     }
   }, []);
-
-  // =========================
-  // ADD TO CART
-  // =========================
 
   const addToCart = async (product) => {
     const token = localStorage.getItem("token");
@@ -108,9 +106,9 @@ function App() {
           return currentCart.map((item) =>
             item.product_id === product.id
               ? {
-                  ...item,
-                  quantity: item.quantity + 1
-                }
+                ...item,
+                quantity: item.quantity + 1
+              }
               : item
           );
         }
@@ -130,10 +128,6 @@ function App() {
       console.log("Error adding to cart:", error);
     }
   };
-
-  // =========================
-  // INCREASE QUANTITY
-  // =========================
 
   const increaseQuantity = async (productId) => {
     try {
@@ -172,9 +166,9 @@ function App() {
         currentCart.map((item) =>
           item.product_id === productId
             ? {
-                ...item,
-                quantity: item.quantity + 1
-              }
+              ...item,
+              quantity: item.quantity + 1
+            }
             : item
         )
       );
@@ -182,10 +176,6 @@ function App() {
       console.log(error);
     }
   };
-
-  // =========================
-  // DECREASE QUANTITY
-  // =========================
 
   const decreaseQuantity = async (productId) => {
     const item = cart.find(
@@ -224,9 +214,9 @@ function App() {
         currentCart.map((item) =>
           item.product_id === productId
             ? {
-                ...item,
-                quantity: item.quantity - 1
-              }
+              ...item,
+              quantity: item.quantity - 1
+            }
             : item
         )
       );
@@ -234,10 +224,6 @@ function App() {
       console.log(error);
     }
   };
-
-  // =========================
-  // REMOVE FROM CART
-  // =========================
 
   const removeFromCart = async (productId) => {
     try {
@@ -270,19 +256,11 @@ function App() {
     }
   };
 
-  // =========================
-  // TOTAL
-  // =========================
-
   const total = cart.reduce(
     (sum, product) =>
       sum + Number(product.price) * product.quantity,
     0
   );
-
-  // =========================
-  // HOME PAGE
-  // =========================
 
   function Home() {
     return (
@@ -329,10 +307,6 @@ function App() {
     );
   }
 
-  // =========================
-  // CART PAGE
-  // =========================
-
   function CartPage() {
     return (
       <Cart
@@ -344,10 +318,6 @@ function App() {
       />
     );
   }
-
-  // =========================
-  // MAIN APP
-  // =========================
 
   return (
     <div>
@@ -377,6 +347,15 @@ function App() {
         <Route
           path="/cart"
           element={<CartPage />}
+        />
+
+        <Route
+          path="/forgot-password"
+          element={<ForgotPassword />}
+        />
+
+        <Route path="/admin"
+          element={<Admin />}
         />
       </Routes>
 

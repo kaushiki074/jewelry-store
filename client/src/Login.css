@@ -1,7 +1,3 @@
-/* ================================
-   LOGIN PAGE
-================================ */
-
 .login-page {
   min-height: 65vh;
 
@@ -15,11 +11,6 @@
 
   box-sizing: border-box;
 }
-
-
-/* ================================
-   LOGIN CARD
-================================ */
 
 .login-card {
   width: 100%;
@@ -37,11 +28,6 @@
 
   box-sizing: border-box;
 }
-
-
-/* ================================
-   LOGIN HEADER
-================================ */
 
 .login-header {
   text-align: center;
@@ -69,19 +55,9 @@
   line-height: 1.6;
 }
 
-
-/* ================================
-   FORM
-================================ */
-
 .login-form {
   width: 100%;
 }
-
-
-/* ================================
-   FORM GROUP
-================================ */
 
 .form-group {
   width: 100%;
@@ -99,11 +75,6 @@
   font-size: 13px;
   letter-spacing: 0.5px;
 }
-
-
-/* ================================
-   INPUTS
-================================ */
 
 .login-form input {
   width: 100%;
@@ -141,11 +112,6 @@
     0 0 0 2px rgba(164, 135, 90, 0.08);
 }
 
-
-/* ================================
-   LOGIN BUTTON
-================================ */
-
 .login-button {
   width: 100%;
   height: 46px;
@@ -176,11 +142,6 @@
   color: #8d7049;
 }
 
-
-/* ================================
-   SUCCESS MESSAGE
-================================ */
-
 .login-message {
   margin: 20px 0 0;
 
@@ -190,11 +151,6 @@
 
   font-size: 14px;
 }
-
-
-/* ================================
-   ERROR MESSAGE
-================================ */
 
 .login-error {
   margin: 20px 0 0;
@@ -212,11 +168,6 @@
 
   font-size: 13px;
 }
-
-
-/* ================================
-   SIGNUP
-================================ */
 
 .signup-link {
   display: flex;
@@ -253,10 +204,21 @@
   text-decoration: underline;
 }
 
+.forgot-password-container {
+  text-align: right;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
 
-/* ================================
-   TABLET
-================================ */
+.forgot-password-container a {
+  color: #a4875a;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot-password-container a:hover {
+  text-decoration: underline;
+}
 
 @media (max-width: 600px) {
 
@@ -277,11 +239,6 @@
   }
 
 }
-
-
-/* ================================
-   SMALL MOBILE
-================================ */
 
 @media (max-width: 400px) {
 

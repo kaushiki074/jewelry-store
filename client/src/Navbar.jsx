@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 import {
   Menu,
   MapPin,
@@ -16,29 +17,49 @@ function Navbar({
   cart,
   setSearch
 }) {
+
   const cartCount = cart
     ? cart.reduce(
-        (total, item) =>
-          total + Number(item.quantity),
-        0
-      )
+      (total, item) =>
+        total + Number(item.quantity),
+      0
+    )
     : 0;
+    
+  const isAdmin = (() => {
+
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+      return false;
+    }
+
+    try {
+
+      const payload = JSON.parse(
+        atob(token.split(".")[1])
+      );
+
+      return payload.role === "admin";
+
+    } catch (error) {
+
+      return false;
+
+    }
+
+  })();
+
 
   return (
     <nav className="navbar">
 
-      {/* =====================
-          TOP ROW
-      ===================== */}
-
       <div className="navbar-top">
 
-      
-
-
-        {/* LOGO */}
         <div className="logo">
+
           <Link to="/">
+
             <span className="logo-main">
               JEWELRY
             </span>
@@ -46,23 +67,20 @@ function Navbar({
             <span className="logo-sub">
               STORE
             </span>
+
           </Link>
+
         </div>
 
-
-        {/* RIGHT ICONS */}
         <div className="nav-actions">
-
-          {/* STORE */}
           <Link
             to="/"
             className="nav-icon-link"
+            aria-label="Store"
           >
             <Store />
           </Link>
 
-
-          {/* SEARCH */}
           <button
             type="button"
             className="nav-icon-link"
@@ -71,35 +89,42 @@ function Navbar({
             <Search />
           </button>
 
-
-          {/* WISHLIST */}
           <button
             type="button"
             className="nav-icon-link wishlist-link"
             aria-label="Wishlist"
           >
+
             <Heart />
 
             <span className="icon-count">
               0
             </span>
+
           </button>
 
-
-          {/* CART */}
           <Link
             to="/cart"
             className="nav-icon-link cart-link"
+            aria-label="Cart"
           >
+
             <ShoppingBag />
 
             <span className="icon-count">
               {cartCount}
             </span>
+
           </Link>
+          
+          {isAdmin && (
 
+            <Link to="/admin">
+              Admin
+              <button>Logout</button>
+            </Link>
+          )}
 
-          {/* LOGIN / LOGOUT */}
           {isLoggedIn ? (
 
             <button
@@ -129,10 +154,6 @@ function Navbar({
         </div>
 
       </div>
-
-      {/* =====================
-          SEARCH BAR
-      ===================== */}
 
       <div className="navbar-search">
 
